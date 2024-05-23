@@ -1,35 +1,19 @@
+import Contato.AgendaContato;
 import Convidado.ConjuntoConvidado;
 import Livro.CatalogoLivros;
+import Ordenacao.CadastroProduto;
 import Ordenacao.OrdenacaoPessoa;
 
 public class Main {
     public static void main (String[]args) {
-        ConjuntoConvidado conjuntoConvidados = new ConjuntoConvidado();
-
-
-        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set de Convidados");
-
-        // Adicionando convidados ao conjunto
-        conjuntoConvidados.addConvidado("Alice", 1234);
-        conjuntoConvidados.addConvidado("Bob", 1235);
-        conjuntoConvidados.addConvidado("Charlie", 1235);
-        conjuntoConvidados.addConvidado("David", 1236);
-
-
-        System.out.println("Convidados no conjunto:");
-        conjuntoConvidados.exibirConvidados();
-
-
-        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set de Convidados");
-
-
-        conjuntoConvidados.removerConvidadoPorCodigoDoConvite(1236);
-        System.out.println("Existem " + conjuntoConvidados.contarConvidados() + " convidado(s) dentro do Set de Convidados após a remoção");
-
-
-        System.out.println("Convidados no conjunto após a remoção:");
-        conjuntoConvidados.exibirConvidados();
-
+        CadastroProduto cadastroProduto = new CadastroProduto();
+        cadastroProduto.adicionarProduto(1L, "Produto 5",15d,5);
+        cadastroProduto.adicionarProduto(2L, "Produto 0",20d,10);
+        cadastroProduto.adicionarProduto(1L, "Produto 3",10d,2);
+        cadastroProduto.adicionarProduto(9L, "Produto 9",2d,2);
+        cadastroProduto.exibirProdutos();
+        System.out.println(cadastroProduto.exibirProdutosPorNome());
+        System.out.println(cadastroProduto.exibirProdutosPorPreco());
 
     }
 }
