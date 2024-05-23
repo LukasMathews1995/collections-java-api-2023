@@ -9,6 +9,8 @@ public class ListaTarefa {
     public ListaTarefa() {
         this.tarefaList = new ArrayList<>();
     }
+
+
     public void adicionarTarefa(String descricao) {
         this.tarefaList.add(new Tarefa(descricao));
     }
@@ -26,6 +28,8 @@ public class ListaTarefa {
         public int ObterTarefaNumero() {
        return tarefaList.size();
         }
+
+
         public void ObterDescricao() {
         for(Tarefa t : tarefaList) {
             System.out.println(t.getDescricao());

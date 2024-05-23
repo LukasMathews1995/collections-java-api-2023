@@ -1,8 +1,5 @@
-package Ordenacao;
+package Ordenacao.Produtos;
 
-import org.w3c.dom.ls.LSOutput;
-
-import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.TreeSet;

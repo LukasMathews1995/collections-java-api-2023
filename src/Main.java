@@ -1,19 +1,19 @@
-import Contato.AgendaContato;
-import Convidado.ConjuntoConvidado;
-import Livro.CatalogoLivros;
-import Ordenacao.CadastroProduto;
-import Ordenacao.OrdenacaoPessoa;
+import Ordenacao.Eventos.AgendaEventos;
+import Pesquisa.EstoqueProduto;
+
+import java.time.LocalDate;
+import java.time.Month;
 
 public class Main {
     public static void main (String[]args) {
-        CadastroProduto cadastroProduto = new CadastroProduto();
-        cadastroProduto.adicionarProduto(1L, "Produto 5",15d,5);
-        cadastroProduto.adicionarProduto(2L, "Produto 0",20d,10);
-        cadastroProduto.adicionarProduto(1L, "Produto 3",10d,2);
-        cadastroProduto.adicionarProduto(9L, "Produto 9",2d,2);
-        cadastroProduto.exibirProdutos();
-        System.out.println(cadastroProduto.exibirProdutosPorNome());
-        System.out.println(cadastroProduto.exibirProdutosPorPreco());
 
+        AgendaEventos eventos = new AgendaEventos();
+        eventos.adicionarEvento(LocalDate.of(1995,8,7),"Nascimento", "Eu");
+        eventos.adicionarEvento(LocalDate.of(2003,2,8),"Nascimento Irma", "Mariana");
+        eventos.adicionarEvento(LocalDate.of(2022, Month.APRIL,17),"Evento 3 ", "50 cent");
+        eventos.adicionarEvento(LocalDate.of(2024,Month.JUNE,1),"VR pagode","Dilsinho");
+        eventos.adicionarEvento(LocalDate.of(2024,Month.JUNE,3),"VR pagode","Dilsinho e Ferrugem");
+        eventos.exibirAgenda();
+        eventos.obterProximoEvento();
     }
 }
